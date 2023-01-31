@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Index from './components/App';
 import reportWebVitals from './reportWebVitals';
+import { RoomProvider } from './utils/room';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Index />
+    <RoomProvider>
+      <Index />
+    </RoomProvider>
   </React.StrictMode>
 );
 

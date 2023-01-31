@@ -1,8 +1,11 @@
 import React from 'react';
 import logo from './logo.png';
 import { AppHeader, AppLink, AppLogo, Wrapper } from './styled';
+import { useRoom } from '../../utils/room';
 
 function Index() {
+  const { room } = useRoom();
+
   return (
     <Wrapper>
       <AppHeader>
@@ -17,6 +20,9 @@ function Index() {
         >
           Learn React
         </AppLink>
+        <pre>
+          Room: {JSON.stringify(room, null, 2)}
+        </pre>
       </AppHeader>
     </Wrapper>
   );
