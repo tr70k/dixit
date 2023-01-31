@@ -1,25 +1,16 @@
-# Dixit Client
+## Dixit Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Client side of the application. Uses: [Typescript](https://www.typescriptlang.org/), [React](https://reactjs.org/), [styled-components](https://styled-components.com/), [socket.io-client](https://socket.io/docs/v4/client-api/).
 
-## Available Scripts
+**Available Scripts**
+- `npm run eslint` - runs eslint
+- `npm run eslint:fix` - runs eslint in the fix mode
+- `npm start` - runs the app in the dev mode (hot reload)
+- `npm run build` - builds the app for production to the `build` folder
+- `npm test` - runs tests
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
+**.env**
+```dotenv
+PORT=4001
+REACT_APP_SERVER_URL=http://localhost:4002
+```
