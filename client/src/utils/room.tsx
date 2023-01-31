@@ -1,8 +1,6 @@
 import React, { createContext, ReactNode, useContext, useEffect, useRef, useState } from 'react';
 import { io, Socket } from 'socket.io-client';
 
-const API_URL = 'http://localhost:4000';
-
 interface ServerToClientEvents {
   noArg: () => void;
   basicEmit: (a: number, b: string, c: Buffer) => void;
@@ -46,7 +44,7 @@ export type RoomProviderProps = {
 }
 
 export const RoomProvider = (props: RoomProviderProps) => {
-  const socket: Socket<ServerToClientEvents, ClientToServerEvents> = useRef(io(API_URL, {
+  const socket: Socket<ServerToClientEvents, ClientToServerEvents> = useRef(io(process.env.REACT_APP_SERVER_URL ?? '', {
     autoConnect: false,
   })).current;
   const [roomData, setRoomData] = useState(null);
@@ -60,7 +58,7 @@ export const RoomProvider = (props: RoomProviderProps) => {
       console.log('socket connected: ', socket.connected); // false
     });
 
-    // socket.connect();
+    socket.connect();
 
     return () => {
       socket.disconnect();
