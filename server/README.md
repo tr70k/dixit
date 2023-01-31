@@ -8,7 +8,7 @@ Server side of the application. Uses: [Typescript](https://www.typescriptlang.or
 - `npm run dev` - runs the app in the dev mode (hot reload)
 - `npm run build` - builds the app for production to the `dist` folder
 - `npm run start` - runs the app in the production mode
-- `npm test` - runs tests
+- `npm run test` - runs tests
 
 **.env**
 ```dotenv
