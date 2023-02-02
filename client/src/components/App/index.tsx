@@ -4,7 +4,7 @@ import { AppHeader, AppLink, AppLogo, Wrapper } from './styled';
 import { useRoom } from '../../utils/room';
 
 function Index() {
-  const { room } = useRoom();
+  const { room, me, join, leave } = useRoom();
 
   return (
     <Wrapper>
@@ -20,8 +20,14 @@ function Index() {
         >
           Learn React
         </AppLink>
+        <button onClick={() => join('1234')}>Join</button>
+        <button onClick={() => leave()}>Leave</button>
         <pre>
           Room: {JSON.stringify(room, null, 2)}
+        </pre>
+        <br />
+        <pre>
+          Me: {JSON.stringify(me, null, 2)}
         </pre>
       </AppHeader>
     </Wrapper>

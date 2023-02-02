@@ -13,6 +13,11 @@ export const AppHeader = styled.header`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
+  & pre {
+    width: 90%;
+    text-align: left;
+  }
 `;
 
 export const AppLink = styled.a`
