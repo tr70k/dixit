@@ -1,4 +1,4 @@
-## Dixit Client
+## Client
 
 Client side of the application. Uses: [Typescript](https://www.typescriptlang.org/), [React](https://reactjs.org/), [styled-components](https://styled-components.com/), [socket.io-client](https://socket.io/docs/v4/client-api/).
 

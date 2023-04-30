@@ -1,13 +1,76 @@
-body {
+html, body, #root {
+  height: 100%;
+  padding: 0;
   margin: 0;
+}
+
+body {
+  background: rgb(34,193,195);
+  /* #22C1C3 #FDBB2D */
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  /*background-color: #f7f7f7;*/
+  /*background-color: #333;*/
+  color: #333;
+  /*color: #f7f7f7;*/
+
+}
+
+#root {
+  overflow: auto;
+}
+
+*:not(pre) {
+  box-sizing: border-box;
+  /* todo for test */
+  /*border-color: transparent !important;*/
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.notistack-MuiContent {
+  box-shadow: rgba(100,100,111,0.2) 0 7px 29px 0;
+  margin-left: -4px;
+}
+
+.notistack-MuiContent-success {
+  background-color: #4caf50;
+}
+
+.notistack-MuiContent-error {
+  background-color: #d32f2f;
+}
+
+.notistack-MuiContent-warning {
+  background-color: #ffb74d;
+}
+
+.notistack-MuiContent-info {
+  background-color: #29b6f6;
 }

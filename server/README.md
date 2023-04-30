@@ -1,4 +1,4 @@
-## Dixit Server
+## Server
 
 Server side of the application. Uses: [Typescript](https://www.typescriptlang.org/), [Express](http://expressjs.com/), [socket.io](https://socket.io/docs/v4/server-api/).
 

@@ -1,4 +1,4 @@
-## Dixit
+## What's my card? • by tr70k
 
 Online version of the popular card game "[Dixit](https://en.wikipedia.org/wiki/Dixit_(card_game))".
 

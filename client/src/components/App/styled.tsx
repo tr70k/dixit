@@ -1,40 +1,44 @@
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  text-align: center;
-`;
-
-export const AppHeader = styled.header`
-  background-color: #282c34;
-  min-height: 100vh;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-width: 1000px;
+  padding: 8px 16px 16px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
   
-  & pre {
-    width: 90%;
-    text-align: left;
+  div {
+    border-color: transparent !important;
   }
 `;
 
-export const AppLink = styled.a`
-  color: #61dafb;
-`;
-
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+export const Title = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0 0 ${(props) => props.theme.spacing.s}px;
+  gap: ${(props) => props.theme.spacing.xs}px;
+  
+  button {
+    margin-left: -${(props) => props.theme.spacing.xs}px;
   }
 `;
 
-export const AppLogo = styled.img`
-  height: 40vmin;
-  pointer-events: none;
-  animation: ${rotate} infinite 20s linear;
+export const Copyright = styled.div`
+  height: 16px;
+  margin-bottom: -16px;
+  font-size: 12px;
+`;
+
+export const Menu = styled.div`
+  position: absolute;
+  top: ${(props) => props.theme.spacing.s}px;
+  right: ${(props) => props.theme.spacing.m}px;
+  display: flex;
+  gap: ${(props) => props.theme.spacing.s}px;
+  
+  button {
+    font-size: 20px;
+  }
 `;
