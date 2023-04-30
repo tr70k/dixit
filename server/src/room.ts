@@ -197,7 +197,7 @@ export class Room {
   private forceKick(color: Color) {
     const initialPlayingPlayers = this.getPlayingPlayers();
     const kickedPlayerIndex = initialPlayingPlayers.findIndex(player => player.color === color) ?? 0;
-    const isPlaying = initialPlayingPlayers[kickedPlayerIndex].isPlaying;
+    const isPlaying = initialPlayingPlayers[kickedPlayerIndex]?.isPlaying;
 
     this.players = this.players.filter(player => player.color !== color);
     this.resetHasNotLeftPlayers();
